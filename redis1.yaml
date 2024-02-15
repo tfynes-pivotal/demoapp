@@ -1,0 +1,12 @@
+apiVersion: services.apps.tanzu.vmware.com/v1alpha1
+kind: ClassClaim
+metadata:
+  annotations:
+    classclaims.services.apps.tanzu.vmware.com/xrd-name: xredisclusters.bitnami.caching.tanzu.vmware.com
+  finalizers:
+  - classclaims.services.apps.tanzu.vmware.com/provision-finalizer
+  name: redis1
+spec:
+  classRef:
+    name: redis-unmanaged
+  parameters: {}

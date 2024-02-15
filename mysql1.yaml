@@ -1,0 +1,12 @@
+apiVersion: services.apps.tanzu.vmware.com/v1alpha1
+kind: ClassClaim
+metadata:
+  annotations:
+    classclaims.services.apps.tanzu.vmware.com/xrd-name: xmysqlinstances.bitnami.database.tanzu.vmware.com
+  finalizers:
+  - classclaims.services.apps.tanzu.vmware.com/provision-finalizer
+  name: mysql1
+spec:
+  classRef:
+    name: mysql-unmanaged
+  parameters: {}
